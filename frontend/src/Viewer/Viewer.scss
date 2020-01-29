@@ -1,0 +1,327 @@
+
+html, body, #react-root {
+  height: 100%;
+}
+
+h4 {
+  font-family: Oxygen;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 26px;
+  font-size: 18px;
+  color: rgba(0, 0, 0, 0.399541);
+}
+
+.RecallItem {
+
+  display: flex;
+  margin: 35px 0;
+
+  .image {
+    flex-shrink: 0;
+    width: 60px;
+    height: 60px;
+    background: #D8D8D8;
+    border-radius: 8px;
+  }
+
+  .description {
+    margin-left: 20px;
+  }
+
+  h3 {
+    /* Murphy Bed Hardware */
+    font-weight: normal;
+    line-height: 26px;
+    font-size: 18px;
+    color: #4A4A4A;
+    margin: 0 0 4px 0;
+  }
+
+  p {
+    font-weight: 300;
+    line-height: 20px;
+    font-size: 14px;
+    color: #4A4A4A;
+    margin: 0 0 4px 0;
+  }
+
+  &.-short {
+    h3 {
+      font-size: 15px;
+    }
+    margin: 25px 0;
+
+    div.description {
+      margin-left: 0;
+    }
+
+    max-width: 245px;
+  }
+
+}
+
+span.left-bullet {
+  &::before {
+    content: '•';
+    padding: 0 7px;
+    color: #D8D8D8;
+  }
+}
+
+h2 {
+  line-height: 26px;
+  font-size: 18px;
+  color: rgba(0, 0, 0, 0.399541);
+  font-weight: normal;
+}
+
+.content {
+  overflow: hidden scroll;
+  padding: 10px 15px 10px 25px;
+  background: #96d4e826;
+}
+
+#RecallIt {
+
+  &.shown {
+
+    div.-body {
+      animation: none;
+      opacity: 1;
+    }
+  }
+
+  ul.style-1 {
+    padding-inline-start: 20px;
+    list-style-type: none;
+    font-family: Oxygen;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 20px;
+    font-size: 14px;
+    color: #4A4A4A;
+
+    li {
+      margin: 10px 0;
+    }
+  }
+
+  &.fullscreen {
+    bottom: 20px;
+    left: 20px;
+  }
+
+
+  font-family: 'Oxygen', 'Open Sans';
+  font-size: 13px;
+  font-weight: 300;
+  color: #4A4A4A;
+  letter-spacing: 0;
+  line-height: 20px;
+
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+
+  a {
+    font-family: Oxygen;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 20px;
+    font-size: 14px;
+    text-align: center;
+    letter-spacing: 1px;
+    color: #4A90E2;
+    outline: none;
+    text-decoration: none;
+  }
+
+  .links {
+    margin-top: 15px;
+    margin-left: 10px;
+
+    a {
+      font-style: normal;
+      font-weight: normal;
+      line-height: normal;
+      font-size: 18px;
+      letter-spacing: 1.29px;
+      text-transform: uppercase;
+      color: rgba(0, 0, 0, 0.399541);
+      text-decoration: none;
+
+      &.active {
+        color: #4A90E2;
+      }
+    }
+  }
+
+  .links a:not(:last-child) {
+    margin-right: 10px;
+  }
+
+  .center {
+    text-align: center;
+    display: block;
+  }
+
+  h2 {
+    margin-top: 0;
+  }
+
+  header {
+    box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.14);
+    padding: 20px 15px 10px;
+    background: #e4e4e461;
+    z-index: 10;
+  }
+}
+
+.-body {
+  //max-height: 70vh;
+  background: white;
+  display: flex;
+  flex-direction: column;
+
+  border: 1px solid rgba(150, 150, 150, 0.29);
+  margin-bottom: 20px;
+  border-radius: 4px;
+
+  opacity: 0;
+
+  -webkit-animation: 1.5s ease 1s normal forwards 1 fadein;
+  animation: 1.5s ease 1s normal forwards 1 fadein;
+
+  header  {
+    h1, h2 {
+      margin: 0 !important;
+    }
+
+    h1 {
+      line-height: 24px;
+      font-size: 20px;
+
+    }
+  }
+
+}
+
+#logo {
+  position: relative;
+  width: 60px;
+  left: 0px;
+  opacity: 0;
+  text-align: center;
+  -webkit-animation: 1s ease 0s normal forwards 1 fadein;
+  animation: 1s ease 0s normal forwards 1 fadein;
+
+  @keyframes pulse {
+    0% {
+      box-shadow: 0 0 0 0 rgba(244, 152, 49, 0.3);
+    }
+    21% {
+      box-shadow: 0 0 0 10px rgba(204,169,44, 0);
+    }
+
+    30%, 100% {
+      box-shadow: 0 0 0 0 rgba(204,169,44, 0);
+    }
+  }
+
+  img {
+    width: 50px;
+    height: 50px;
+    animation: pulse 5s infinite;
+    cursor: pointer;
+    border-radius: 50%;
+
+    &:hover {
+      animation: none;
+    }
+  }
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  66% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+h4.title-group {
+  margin: 20px 0 5px 0;
+}
+
+h4.title-group + p {
+
+  margin: 0 0 15px 0;
+
+}
+
+div.grid {
+  display: flex;
+
+  > {
+    div:nth-child(1), div:nth-child(3) {
+      margin-right: 20px;
+    }
+
+    div:nth-child(2), div:nth-child(4) {
+      margin-left: 20px;
+    }
+  }
+
+
+}
+
+.ReactTable {
+  background: white;
+  margin-top: 10px;
+
+  .-txt-right {
+    text-align: right;
+  }
+
+  *:focus {
+    outline: none;
+  }
+
+}
+
+footer {
+
+  margin: 0 0px -4px 0px;
+  border-radius: 0 0 4px 4px;
+  color: white;
+  text-align: center;
+
+  font-weight: 600;
+  font-size: 12px;
+
+  div {
+    padding: 3px;
+    background-color: #005F96;
+  }
+
+  div:last-child {
+    background-color: #4A90E2;
+    border-radius: 0 0 8px 8px;
+  }
+
+  &:empty {
+    margin: 0;
+  }
+
+  .barlink {
+    cursor: pointer;
+  }
+}
+
+
+

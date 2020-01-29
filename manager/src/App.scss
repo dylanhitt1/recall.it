@@ -1,0 +1,50 @@
+.home-app {
+  height: 100%;
+  overflow-y: hidden;
+
+  .sidebar {
+    position: fixed;
+    box-sizing: border-box;
+    overflow: auto;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 40px;
+    width: 260px;
+    height: 100%;
+    background-color: #f7f7f7;
+
+    li {
+      padding: 10px 0 2px;
+      a {
+        border-bottom: none;
+        color: black;
+      }
+      a.active {
+        color: green;
+      }
+    }
+
+    .memo {
+      &:before {
+        content: ' ';
+        display: block;
+        height: 2px;
+        width: 60px;
+        margin-bottom: 10px;
+        background-color: #ddd;
+      }
+      font-size: 13px;
+      margin-top: 40px;
+      line-height: 150%;
+      color: #aaa;
+    }
+  }
+
+  .page-container {
+    position: absolute;
+    right: 30px;
+    left: 300px;
+    height: 100%;
+  }
+}

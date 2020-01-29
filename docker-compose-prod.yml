@@ -1,0 +1,60 @@
+version: "3"
+
+services:
+
+  frontend:
+    ports:
+      - "3000:80"
+    restart: always
+    build:
+      context: ./frontend/.
+      args:
+        - REACT_APP_BACKEND_URL=https://api.recall-oz.com
+    labels:
+      - "traefik.backend=frontend"
+      - "traefik.frontend.rule=Host:recall-oz.com"
+      - "traefik.docker.network=web"
+      - "traefik.port=80"
+    networks:
+      - web
+      - internal
+
+  manager:
+    ports:
+      - "3001:80"
+    restart: always
+    build:
+      context: ./manager/.
+      args:
+        - REACT_APP_BACKEND_URL=https://api.recall-oz.com
+    labels:
+      - "traefik.frontend.rule=Host:admin.recall-oz.com"
+      - "traefik.backend=manager"
+      - "traefik.port=80"
+      - "traefik.docker.network=web"
+    networks:
+      - web
+      - internal
+
+  backend:
+    ports:
+      - "3111:3111"
+    restart: always
+    build: ./backend/.
+    environment:
+      - MONGO_URL=${MONGO_URL}
+    labels:
+      - "traefik.frontend.rule=Host:api.recall-oz.com"
+      - "traefik.backend=backend"
+      - "traefik.port=3111"
+      - "traefik.docker.network=web"
+    networks:
+      - internal
+      - web
+
+networks:
+  internal:
+    external: false
+  web:
+    external: true
+

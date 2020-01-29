@@ -1,0 +1,28 @@
+version: "3"
+
+services:
+
+  frontend:
+    ports:
+      - "3000:80"
+    restart: always
+    build:
+      context: ./frontend/.
+      args:
+        - REACT_APP_BACKEND_URL=http://localhost:3111
+
+  manager:
+    ports:
+      - "3001:80"
+    restart: always
+    build: ./manager/.
+    environment:
+      - REACT_APP_BACKEND_URL=http://localhost:3111
+
+  backend:
+    ports:
+      - "3111:3111"
+    restart: always
+    build: ./backend/.
+    environment:
+      - MONGO_URL=${MONGO_URL}

@@ -1,0 +1,31 @@
+version: "3"
+
+networks:
+  web:
+    external: true
+  internal:
+    external: false
+
+services:
+  app:
+    build: .
+    environment:
+      - NODE_DB_PASSWORD=changethislater
+    labels:
+      - traefik.backend=app
+      - traefik.frontend.rule=Host:recall-oz.com
+      - traefik.docker.network=web
+      - traefik.port=80
+    networks:
+      - internal
+      - web
+    depends_on:
+      - mongo
+  mongo:
+    image: 'mongo image'
+    environment:
+      - MONGO_ROOT_Password=changethislater
+    networks:
+      - internal
+    labels:
+      - traefik.enable=false

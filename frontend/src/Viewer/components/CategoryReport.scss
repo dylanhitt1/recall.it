@@ -1,0 +1,258 @@
+
+p.intro-text {
+  font-family: 'Oxygen', 'Open Sans';
+  font-size: 16px;
+  color: #4A4A4A;
+  line-height: 26px;
+  font-weight: 400;
+}
+
+p.subtitle {
+  /* p.subtitle - This is Copy: */
+  font-family: 'Oxygen', 'Open Sans';
+  font-style: italic;
+  font-weight: 400;
+  font-size: 13px;
+  color: rgba(0, 0, 0, 0.59);
+  letter-spacing: -0.1px;
+  line-height: 26px;
+  margin: 0;
+}
+
+#feedback-modal {
+
+  background: white;
+  width: 90%;
+  margin: 20px auto;
+
+  h2 {
+    margin-bottom: 0;
+  }
+
+  h3 {
+    margin-top: 10px;
+    margin-bottom: 2px;
+  }
+
+  p {
+    margin: 0;
+  }
+
+
+  textarea {
+    width: 100%;
+    resize: none;
+    height: 230px;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 6px;
+    border: 1px solid lightgray;
+    margin-top: 5%;
+  }
+
+  button {
+    line-height: 2;
+    border-radius: 6px;
+    padding: 1px 15px;
+    background-color: #0288D1;
+    color: white;
+    border: 1px solid #0288D1;
+    margin-top: 4%;
+    float: right;
+    cursor: pointer;
+    outline: none;
+  }
+
+  button.cancel {
+    background-color: lightgrey;
+    margin-right: 10px;
+    border: 1px solid darkgray;
+    color: black;
+  }
+}
+
+
+.categoryReportItem {
+
+
+  background: white;
+  margin: 15px 0;
+  position: relative;
+  width: calc(100% - 40px);
+  padding: 20px;
+  box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.12), 0 1px 2px 0 rgba(0, 0, 0, 0.24);
+  border-radius: 2px;
+  transition: height 0.3s ease-in;
+
+  .-feedback-button {
+    transition: background 0.1s ease-in;
+    width: 13px;
+    height: 13px;
+    background: #3f51b57d;
+    border-radius: 50%;
+    display: block;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+
+    &:hover {
+      background: rgba(89, 83, 255, 0.98);
+    }
+  }
+
+  .popup-content {
+    border-radius: 4px;
+
+    ul {
+      list-style-type: none;
+      padding-left: 0;
+      margin: 0;
+
+      li {
+        text-transform: uppercase;
+        font-weight: 600;
+        padding: 5px 10px;
+        line-height: 35px;
+        cursor: pointer;
+
+        &:hover {
+          background: #f0f0f0;
+          color: black;
+        }
+      }
+    }
+  }
+
+
+  &.-no-images {
+    .-images {
+      display: none;
+    }
+
+    .-content, .-details {
+      width: 100%;
+      margin-left: 0;
+    }
+  }
+
+  .intro-text {
+    margin: 0;
+  }
+
+  .-images {
+    position: absolute;
+    width: 75px;
+    left: 20px;
+
+  }
+
+  .-photo {
+    width: 60px;
+    height: 60px;
+    border-radius: 8px;
+    margin-right: 15px;
+    margin-bottom: 15px;
+    background: white no-repeat center;
+    background-size: contain;
+  }
+
+  .-content, .-details {
+    width: calc(100% - 75px);
+    margin-left: 75px;
+  }
+
+  .-urls a {
+    margin-right: 15px;
+    font-size: 13px;
+    color: #4A90E2;
+    letter-spacing: 0.93px;
+  }
+
+  .-bubbles span {
+    border-radius: 8px;
+    padding: 4px 9px;
+    margin-left: 8px;
+    margin-right: 8px;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 13px;
+    font-stretch: normal;
+    line-height: 1.86;
+    letter-spacing: normal;
+    text-align: left;
+    font-family: 'Open Sans';
+    background-color: #d7d8e4;
+    color: #000000bd !important;
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+
+  .productCatName {
+    font-size: 15px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.44;
+    letter-spacing: normal;
+    color: rgba(0, 0, 0, 0.4);
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  .-details {
+    padding-top: 15px;
+    margin-top: 10px;
+    border-top: 1px solid rgba(0, 0, 0, 0.12);
+
+  }
+
+  .-footer {
+    line-height: 1.15;
+    margin: 20px -20px -20px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    text-align: center;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-top: 1px solid rgba(0, 0, 0, 0.04);
+    transition: background 0.1s ease-in, color 0.1s ease-in;
+    background: rgba(211, 211, 211, 0.17);
+    font-weight: 400;
+
+    &:hover {
+      background: darken(rgba(211, 211, 211, 0.17), 10%);
+      color: darken(#4A4A4A, 10%);
+    }
+  }
+
+  .-hazards p, .-description {
+    font-size: 15px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.44;
+    letter-spacing: normal;
+    color: #4A4A4A;
+
+    display: block;
+    margin-bottom: 10px;
+
+    span:first-child {
+      padding-left: 15px;
+    }
+
+    span {
+      color: rgba(0, 0, 0, 0.4);
+      font-size: 13px;
+      letter-spacing: 0;
+      line-height: 20px;
+    }
+
+    span + span {
+      padding-left: 10px;
+    }
+  }
+
+}
