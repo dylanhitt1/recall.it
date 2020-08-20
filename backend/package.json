@@ -22,7 +22,7 @@
     "argparse": "^1.0.10",
     "axios": "^0.17.0",
     "babel-preset-latest-node": "^2.0.0-beta.3",
-    "bcrypt": "^3.0.2",
+    "bcrypt": "^5.0.0",
     "chai": "^4.1.2",
     "chalk": "^2.4.0",
     "cli-table": "^0.3.1",
