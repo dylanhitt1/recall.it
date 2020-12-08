@@ -59,7 +59,7 @@
     "express-async-errors": "^3.1.1",
     "express-joi-middleware": "^1.0.0",
     "express-joi-validation": "^0.3.0",
-    "fast-csv": "^2.4.1",
+    "fast-csv": "^4.3.6",
     "helmet": "^3.14.0",
     "joi": "^14.0.0",
     "jsonwebtoken": "^8.2.0",
