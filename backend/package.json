@@ -36,7 +36,7 @@
     "file-loader": "^1.1.6",
     "inquirer": "^5.2.0",
     "inquirer-autocomplete-prompt": "^0.12.2",
-    "lodash": "^4.17.4",
+    "lodash": "^4.17.21",
     "moment": "^2.22.0",
     "morgan": "^1.9.0",
     "natural": "^0.5.6",
